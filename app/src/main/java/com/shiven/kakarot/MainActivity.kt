@@ -1,6 +1,7 @@
 package com.shiven.kakarot
 
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -26,6 +27,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.colorResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.shiven.kakarot.ui.theme.KakarottoTheme
@@ -48,7 +50,7 @@ class MainActivity : ComponentActivity() {
             }
 
             LaunchedEffect(key1 = Unit) {
-//                kotlinx.coroutines.delay(5000)
+//                kotlinx.coroutines.delay(3000)
                 character = ktorClient.getCharacter(4)
             }
 
@@ -59,9 +61,9 @@ class MainActivity : ComponentActivity() {
                     horizontalAlignment = Alignment.CenterHorizontally,
                     modifier = Modifier.fillMaxSize()
                 ) {
-                    Text(text=character?.name.toString(), fontSize = 20.sp)
+                    Text(text=character.toString(), fontSize = 20.sp)
                     Spacer(Modifier.height(20.dp))
-                    Text(text=character?.isPlanetDestroyed.toString(), fontSize = 20.sp)
+                    CharacterRaceComponent(race = Race.Saiyan)
                 }
             }
         }
@@ -76,13 +78,14 @@ fun CharacterRaceComponent(race: Race) {
             .width(IntrinsicSize.Min)
             .background(
                 color = Color.LightGray,
-                shape = RoundedCornerShape(12.sp)
             )
             .border(
                 width = 2.dp,
-                color = colorResource(id = R.color.)
+                color = colorResource(id = race.color)
             )
     ) {
-        
+        Text( text = "Race", fontSize = 18.sp)
+        Spacer(modifier = Modifier.height(30.dp))
+        Text(text = race.displayName, fontSize = 24.sp, fontWeight = FontWeight.Bold)
     }
 }

@@ -23,23 +23,23 @@ data class CharacterDto(
 
 fun CharacterDto.toDomainCharacter() : Character {
     val characterGender = when(gender.lowercase()){
-        "Male" -> CharacterGender.Male
-        "Female" -> CharacterGender.Female
-        "Other" -> CharacterGender.Other
-        "Unknown" -> CharacterGender.Unknown
+        "male" -> CharacterGender.Male
+        "female" -> CharacterGender.Female
+        "other" -> CharacterGender.Other
+        "unknown" -> CharacterGender.Unknown
         else -> CharacterGender.Unknown
     }
     val raceSpecies = when(race.lowercase()){
-        "Saiyan" -> Race.Saiyan
-        "Human" -> Race.Human
-        "Namekian" -> Race.Namekian
-        "Frieza Race" -> Race.Frieza_Race
-        "Jiren Race" -> Race.Jiren_Race
-        "Android" -> Race.Android
-        "God" -> Race.God
-        "Angel" -> Race.God
-        "Majin" -> Race.Evil
-        "Evil" -> Race.Evil
+        "saiyan" -> Race.Saiyan
+        "human" -> Race.Human
+        "namekian" -> Race.Namekian
+        "frieza race" -> Race.Frieza_Race
+        "jiren race" -> Race.Jiren_Race
+        "android" -> Race.Android
+        "god" -> Race.God
+        "angel" -> Race.God
+        "majin" -> Race.Evil
+        "evil" -> Race.Evil
         else -> Race.Unknown
     }
     return Character(
