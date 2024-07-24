@@ -1,19 +1,19 @@
 package com.shiven.network.model.domain
 
+import com.shiven.network.R
+
 
 // TODO: ADD a custom icon for race
 // club god and angel in same category
 // club majin and evil in same category
 // map else to unknown
-sealed class Race(val displayName: String, val color: Long) {
-
-    object Saiyan: Race(displayName="Saiyan", color = 0xffffffff)
-    object Human: Race(displayName="Human", color = 0xffffffff)
-    object Namekian: Race(displayName = "Namekian", color = 0xffffffff)
-    object Frieza_Race: Race(displayName = "Frieza Race", color = 0xffffffff)
-    object God: Race(displayName = "God", color = 0xffffffff)
-    object Android: Race(displayName = "Android", color = 0xffffffff)
-    object Jiren_Race: Race(displayName = "Jiren Race", color = 0xffffffff)
-    object Evil: Race(displayName = "Evil", color = 0xffffffff)
-    object Unknown: Race(displayName = "Unknown", color = 0xffffffff)
+sealed class Race(val displayName: String, val color: colorResource) {
+    object Saiyan: Race(displayName="Saiyan", color = R.color.saiyan)
+    object Namekian: Race(displayName = "Namekian", color = R.color.namekian)
+    object Frieza_Race: Race(displayName = "Frieza Race", color = R.color.frieza_race)
+    object God: Race(displayName = "God", color = R.color.god)
+    object Android: Race(displayName = "Android", color = R.color.android)
+    object Jiren_Race: Race(displayName = "Jiren Race", color = R.color.jiren_race)
+    object Evil: Race(displayName = "Evil", color = R.color.evil)
+    object Unknown: Race(displayName = "Unknown", color = R.color.unknown)
 }

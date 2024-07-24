@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="saiyan">#FFE7DBA3</color>
+    <color name="human">#FFFFD8BE</color>
+    <color name="namekian">#FF36BF14</color>
+    <color name="frieza_race">#FFF3F0FB</color>
+    <color name="god">#FFC7B5F9</color>
+    <color name="android">#FFBDBDBD</color>
+    <color name="jiren_race">#FFBA1928</color>
+    <color name="evil">#FFF0BECB</color>
+    <color name="unknown">#FFCBC1AE</color>
+</resources>
